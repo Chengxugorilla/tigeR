@@ -33,7 +33,7 @@ library(tigeR.data)
 library(SummarizedExperiment)
 ```
 
-```{r}
+```{r eval=FALSE}
 devtools::install_github('dviraran/xCell')
 devtools::install_github("GfellerLab/EPIC")
 devtools::install_github("cansysbio/ConsensusTME")
@@ -73,7 +73,7 @@ frac10 <- deconv_TME(MEL_GSE78220,method="quanTIseq")
 ```
 :::
 
-## Visualization and comparing the cell proportions
+## Visualizing and comparing the cell proportions
 
 ```{r echo=TRUE, fig.width=26}
 ## TIMER
@@ -83,11 +83,14 @@ frac1 <- deconv_TME(MEL_GSE78220,method="TIMER")
 frac2 <- deconv_TME(MEL_GSE78220,method="CIBERSORT")
 
 cell1 <- c("T cells CD4","Neutrophil", "Macrophage","mDCs","B cells", "T cells CD8")
-pie1 <- fraction_pie(cell_name_filter(frac1),feature=factor(cell1, levels = cell1))
+pie1 <- fraction_pie(cell_name_filter(frac1),
+                     feature=factor(cell1, levels = cell1),
+                     rows=3)
 
 cell2 <- c("DCs resting", "T cells CD8", "T cells CD4 naive", "Macrophages M2", "Yd T cells", "Monocytes","Mast cells resting", "Neutrophils", "Tregs","B cells naive")
 pie2 <- fraction_pie(cell_name_filter(assay(frac2[1:22,])),
-                     feature=factor(cell2, levels = cell2))
+                     feature=factor(cell2, levels = cell2),
+                     rows=3)
 pie1
 pie2
 ```
@@ -103,6 +106,7 @@ browse_biomk(SE=TM_SE)
 ```
 
 ## Generate a custom reference matrix for TME deconvolution from single-cell sequencing data
+ Standard workflow for single cell annotation. Users can skip directly to the **build_CellType_Ref()** function, if an annotated single-cell object is available.
 ```{r message=FALSE, warning=FALSE}
 library(Seurat)
 library(tigeR.data)

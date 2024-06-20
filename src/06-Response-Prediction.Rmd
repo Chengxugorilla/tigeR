@@ -5,7 +5,7 @@ library(tigeR)
 library(tigeR.data)
 ```
  The ipt signature is derived from multi-modal data, which includes bulk RNA-seq, tumor microenvironment information, and clinical data, collected from 275 melanoma patients who underwent Immune checkpoint blockade treatment. A Random Forest model was constructed to conduct feature selection and create the signature.
-```{r echo=TRUE}
+```{r echo=TRUE, fig.width=12}
 pred_response(SE=MEL_GSE93157,Signature = ipt,
               method = "Weighted_mean",threshold = 0.8,
               PT_drop = FALSE,sort_by = "Customed.Signature",

@@ -32,4 +32,4 @@ pred_response(SE=MEL_GSE93157,Signature = ipt,
 ##  B.cell T.cell.CD4. T.cell.CD8. Neutrophil Macrophage Myeloid.dentritic.cell IRS tGE8 MEMTS PRGScore Angiogenesis Teffector Myeloid_inflammatory IFNG_Sig TLS MSKCC LMRGPI PRS Stemnesssignatures Riskscore IPS Tcell_inflamed_GEP DDR CD8Teffector CellCycleReg PanFTBRs EMT1 EMT2 EMT3 does not exist in expression matrix.
 ```
 
-<img src="06-Response-Prediction_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<img src="06-Response-Prediction_files/figure-html/unnamed-chunk-2-1.png" width="1152" />

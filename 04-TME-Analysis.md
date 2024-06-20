@@ -32,50 +32,9 @@ output:
 
 ```r
 devtools::install_github('dviraran/xCell')
-```
-
-```
-## Downloading GitHub repo dviraran/xCell@HEAD
-```
-
-```
-## Error in utils::download.file(url, path, method = method, quiet = quiet,  : 
-##   cannot open URL 'https://api.github.com/repos/dviraran/xCell/tarball/HEAD'
-```
-
-```r
 devtools::install_github("GfellerLab/EPIC")
-```
-
-```
-## Skipping install of 'EPIC' from a github remote, the SHA1 (50a4f404) has not changed since last install.
-##   Use `force = TRUE` to force installation
-```
-
-```r
 devtools::install_github("cansysbio/ConsensusTME")
-```
-
-```
-## Downloading GitHub repo cansysbio/ConsensusTME@HEAD
-```
-
-```
-## Error in utils::download.file(url, path, method = method, quiet = quiet,  : 
-##   cannot open URL 'https://api.github.com/repos/cansysbio/ConsensusTME/tarball/HEAD'
-```
-
-```r
 devtools::install_github("federicomarini/quantiseqr")
-```
-
-```
-## Downloading GitHub repo federicomarini/quantiseqr@HEAD
-```
-
-```
-## Error in utils::download.file(url, path, method = method, quiet = quiet,  : 
-##   cannot open URL 'https://api.github.com/repos/federicomarini/quantiseqr/tarball/HEAD'
 ```
 ::: {style="width:780px; height:200px; overflow-y: scroll; overflow-x: hidden;"}
 
@@ -153,7 +112,7 @@ frac10 <- deconv_TME(MEL_GSE78220,method="quanTIseq")
 ```
 :::
 
-## Visualization and comparing the cell proportions
+## Visualizing and comparing the cell proportions
 
 
 ```r
@@ -194,11 +153,14 @@ frac1 <- deconv_TME(MEL_GSE78220,method="TIMER")
 frac2 <- deconv_TME(MEL_GSE78220,method="CIBERSORT")
 
 cell1 <- c("T cells CD4","Neutrophil", "Macrophage","mDCs","B cells", "T cells CD8")
-pie1 <- fraction_pie(cell_name_filter(frac1),feature=factor(cell1, levels = cell1))
+pie1 <- fraction_pie(cell_name_filter(frac1),
+                     feature=factor(cell1, levels = cell1),
+                     rows=3)
 
 cell2 <- c("DCs resting", "T cells CD8", "T cells CD4 naive", "Macrophages M2", "Yd T cells", "Monocytes","Mast cells resting", "Neutrophils", "Tregs","B cells naive")
 pie2 <- fraction_pie(cell_name_filter(assay(frac2[1:22,])),
-                     feature=factor(cell2, levels = cell2))
+                     feature=factor(cell2, levels = cell2),
+                     rows=3)
 pie1
 ```
 
@@ -231,6 +193,7 @@ browse_biomk(SE=TM_SE)
 <img src="04-TME-Analysis_files/figure-html/unnamed-chunk-5-1.png" width="672" />
 
 ## Generate a custom reference matrix for TME deconvolution from single-cell sequencing data
+ Standard workflow for single cell annotation. Users can skip directly to the **build_CellType_Ref()** function, if an annotated single-cell object is available.
 
 ```r
 library(Seurat)

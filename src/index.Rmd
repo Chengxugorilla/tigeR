@@ -88,6 +88,8 @@ cell_name_standardization(): standardize the cell names in TME deconvolution.
 
 build_CellType_Ref(): generate a custom reference matrix from single-cell RNA sequencing data for TME deconvolution.
 
+diff_TME(): visualize difference of cell fraction between Responder and Non-Responder or Pre-Treatment and Post-Treatment patients.
+
 **Prediction Model Construction**
 
 data_standardization(): perform data standardization, including converting FPKM to TPM, removing NA values, applying log transformation, and scaling the data.

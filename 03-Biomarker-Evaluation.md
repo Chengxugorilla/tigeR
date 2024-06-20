@@ -49,7 +49,7 @@ diff_biomk(SE=MEL_GSE91061,gene='CD274',type='Response') +
 <img src="03-Biomarker-Evaluation_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
 ## Suvival analysis
- You can use **diff_biomk()** to visualize survival analysis result in specified gene.
+ You can use **surv_biomk()** to visualize survival analysis result in specified gene.
 
 
 ```r

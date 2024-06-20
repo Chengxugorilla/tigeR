@@ -1,7 +1,7 @@
 --- 
 title: "tigeR: Tumor Immunotherapy Gene Expression Data Analysis R package"
 author: "Yihao Chen, Li-Na He, Yuanzhe Zhang, Jingru Gong, Shuangbin Xu, Yuelong Shu, Di Zhang, Guangchuang Yu, Zhixiang Zuo"
-date: "2024-06-20"
+date: "2024-06-21"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -87,6 +87,8 @@ fraction_pie(): generate a pie plot illustrating the cell fraction or relative c
 cell_name_standardization(): standardize the cell names in TME deconvolution.
 
 build_CellType_Ref(): generate a custom reference matrix from single-cell RNA sequencing data for TME deconvolution.
+
+diff_TME(): visualize difference of cell fraction between Responder and Non-Responder or Pre-Treatment and Post-Treatment patients.
 
 **Prediction Model Construction**
 

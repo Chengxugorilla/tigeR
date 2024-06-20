@@ -32,7 +32,7 @@ diff_biomk(SE=MEL_GSE91061,gene='CD274',type='Response') +
 ```
 
 ## Suvival analysis
- You can use **diff_biomk()** to visualize survival analysis result in specified gene.
+ You can use **surv_biomk()** to visualize survival analysis result in specified gene.
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 P <- surv_biomk(SE=MEL_GSE91061,gene='CD274')
