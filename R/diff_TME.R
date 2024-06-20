@@ -1,9 +1,11 @@
-#' @title Visualize differential analysis cell_fraction (Responder vs NonResponder or Pre-Treatment vs Post-Treatment).
-#' @description Visualize differential analysis cell_fraction (Responder vs NonResponder or Pre-Treatment vs Post-Treatment).
-#' @param SE an SummarizedExperiment(SE) object or a list consists of SE objects. The colData of SE objects must contain response information.
+#' @title Visualize difference of cell fraction
+#' @description Visualize difference of cell fraction between Responder and Non-Responder or Pre-Treatment and Post-Treatment patients.
+#' @param SE a SummarizedExperiment(SE) object or a list consists of SE objects. The colData of SE objects must contain response information.
 #' @param feature the feature or features you are interested in.
-#' @param style description
-#' @param group_color description
+#' @param style the plotting style. Choose from c("elegant", "raw").
+#' @param group_color a vector of colors with length 2.
+#'                    The first color corresponds to Non-Responders and
+#'                    the second color corresponds to Responders.
 #' @export
 
 diff_TME <- function(SE,feature=NULL,style="elegant",

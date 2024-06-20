@@ -24,7 +24,7 @@ roc_biomk(
 
 \item{method}{the method for calculating gene set scores which has several options: "Average_mean", "Weighted_mean", or "GSVA". The method can be set to NULL if the length of the parameter geneSet is 1. This means that if you are working with only one gene, the specific calculation method may not be applicable or necessary.}
 
-\item{rmBE}{whether remove batch effect between different data set using internal Combat method}
+\item{rmBE}{whether remove batch effect between different data sets using internal Combat method.}
 
 \item{response_NR}{If TRUE, classify patients with CR, MR, PR as Responders (R), and those with PD, SD, NR as Non-Responders(NR).}
 
@@ -40,9 +40,9 @@ roc_biomk(
 }
 \value{
 \describe{
-  Return a list contain the following elements which including:
-    \item{\code{ROC}}{a receiver operating characteristic (ROC) object which controls
-    represent Non-Responder and cases respresent Responder.}
+  Return a list contain the following elements:
+    \item{\code{ROC}}{a receiver operating characteristic (ROC) object in which controls
+    represent Non-Responders and cases respresent Responders.}
     \item{\code{figure}}{a roc curve to show the predictive performance.}
   }
 }

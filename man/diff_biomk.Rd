@@ -18,7 +18,7 @@ diff_biomk(
 )
 }
 \arguments{
-\item{SE}{an SummarizedExperiment(SE) object or a list consists of SE objects. The colData of SE objects must contain response information.}
+\item{SE}{a SummarizedExperiment(SE) object or a list consists of SE objects. The colData of SE objects must contain response information.}
 
 \item{gene}{the Gene or Gene set you are interested in.}
 

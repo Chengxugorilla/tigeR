@@ -1,5 +1,5 @@
 #' @title Draw pie charts for TME deconvolution result
-#' @description Generate a pie charts illustrating the cell fraction or relative cell abundance for each sample.
+#' @description Generate pie charts illustrating the cell fraction or relative cell abundance for each sample.
 #' @param mtr cell fraction matrix
 #' @param feature the color levels of the cell types.
 #' @param rows the number of rows in the plotting matrix.

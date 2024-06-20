@@ -11,9 +11,9 @@ test_Model(Model, SE = NULL, mtr = NULL, meta = NULL, PT_drop = TRUE)
 
 \item{SE}{the dataset you wish to use to test your model. A SummarizedExperiment (SE) object, which can be either a single SE object or a list of SE objects. Note that for each SE object, the colData must contain treatment information under the column name Treatment.}
 
-\item{mtr}{the meta information.}
+\item{mtr}{the expression matrix.}
 
-\item{meta}{meta data of samples}
+\item{meta}{meta data of samples.}
 
 \item{PT_drop}{If TRUE, only Untreated patient will be use for model training.}
 }

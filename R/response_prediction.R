@@ -45,13 +45,13 @@ response_prediction <- function(SE=NULL, exp_mtr=NULL, meta=NULL, threshold,posi
 #' @param positive c("N","R"), the positive case.
 #' @param Signature a gene vector represents user-defined signature for immunotherapy response. If NULL, the function will only calculate 23 built-in signatures in tigeR.
 #' @param method the method for calculating gene set scores which has several options: "Average_mean", "Weighted_mean", or "GSVA". The method can be set to NULL if the length of the parameter geneSet is 1. This means that if you are working with only one gene, the specific calculation method may not be applicable or necessary.
-#' @param PT_drop if TRUE, only Untreated patient will be use for model training.
-#' @param show.val if TRUE, the value will be show in the heatplot.
-#' @param sort_by the signature for the sample sorting in the heatmap.
+#' @param PT_drop if TRUE, only Untreated patient will be used for model training.
+#' @param show.val if TRUE, the value will be showed in the heatplot.
+#' @param sort_by the signature used to sort samples in the heatmap.
 #' @param group_by the signature score used for response classification.
 #' @param show.Observed if TRUE, show the observed cases in heatmap.
 #' @param text_col the color of the text in heatmap.
-#' @param rankscore if TRUE show the Robust Rank Aggregation score in heatmap.
+#' @param rankscore if TRUE, show the Robust Rank Aggregation score in heatmap.
 #' @param ZS if TRUE, conduct Z-score scaling on each signature score.
 #' @import patchwork
 #' @export
