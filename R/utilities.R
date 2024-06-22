@@ -151,20 +151,20 @@ zero2na <- function(V){
 #' @title Ranking features in matrix with Gini index
 #' @description calculating the Gini index and get an overview of the classification efficiency of genes.
 #' @param SE a SummarizedExperiment(SE) object or a list consists of multiple SE objects. The colData of the SE object(s) must contain treatment information named Treatment.
+#' @param length.out the gene length returned by this function.
 #' @importFrom stats setNames
 #' @export
 
-gini_gene <- function(SE){
-  isList <- is.list(SE)
-  exp_mtr <- bind_mtr(SE, isList)
-  mtr <- dataPreprocess(exp_mtr,rownames(exp_mtr), turn2HL = TRUE)
-  label <- bind_meta(SE, isList)$response_NR
+gini_gene <- function(SE, length.out=NULL){
+  SE_new <- dataPreprocess_SE(SE, turn2HL = TRUE)[[1]]
+  label <- SE_new$response_NR
 
-  genes <- rownames(exp_mtr)
-  features_Gini <- apply(mtr, 1, Gini, label = label)
-  Gini <- setNames(features_Gini[genes], genes)
+  genes <- rownames(SE_new)
+  features_Gini <- apply(na.omit(assay(SE_new)), 1, Gini, label = label)
 
-  return(Gini)
+  if(is.null(length.out))
+    length.out <- length(features_Gini)
+  return(sort(features_Gini,decreasing = TRUE)[1:length.out])
 }
 
 #' @title Ranking features in vector with Gini coefficient
