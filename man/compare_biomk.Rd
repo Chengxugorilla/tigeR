@@ -33,3 +33,10 @@ compare_biomk(
 \description{
 Generate a heatmap of signature auc of datasets.
 }
+\examples{
+compare_biomk(
+   SE = list(MEL_GSE78220, MEL_GSE93157),
+   Signature = ipt[1:72],
+   method = "Weighted_mean",
+   PT_drop = FALSE)
+}

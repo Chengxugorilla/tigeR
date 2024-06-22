@@ -16,7 +16,6 @@
 #'    Signature = ipt[1:72],
 #'    method = "Weighted_mean",
 #'    PT_drop = FALSE)
-#' }
 #' @export
 
 compare_biomk <- function(SE=NULL, Signature=NULL, method="Average_mean",
