@@ -170,5 +170,5 @@ pred_response <- function(SE=NULL, exp_mtr=NULL, meta=NULL, threshold=0.8,
           axis.title.y = element_blank(),
           axis.text.x = element_text(size=10,color=text_col,angle = 90, vjust = 0.5, hjust=1),
           axis.text.y = element_blank())
-  return(plt.l + plt.r + plot_layout(widths = c(1,30)))
+  return(plt.l + plt.r + plot_layout(widths = c(2,30)))
 }
