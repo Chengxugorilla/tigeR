@@ -110,7 +110,7 @@ pred_response <- function(SE=NULL, exp_mtr=NULL, meta=NULL, threshold=0.8,
   }))
   if(!ZS){
     sig <- Core(exp_mtr, Signature, method)
-    vl <- cbind(Customed.Signature=sig,vl)
+    vl <- cbind(`Custom signature`=sig,vl)
   }
   vl <- t(na.omit(t(vl)))
   rank_mtr <-

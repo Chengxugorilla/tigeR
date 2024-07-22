@@ -41,10 +41,6 @@ compare_biomk <- function(SE=NULL, Signature=NULL, method="Average_mean",
         })
     })
 
-  # cnames <- unlist(
-  #   lapply(SE, function(x){
-  #     unique(x$dataset_group)
-  #   }))
   cnames <- names(auc.l)
   auc.df <- do.call(cbind, auc.l)
 
@@ -59,7 +55,10 @@ compare_biomk <- function(SE=NULL, Signature=NULL, method="Average_mean",
     theme(axis.text.x = element_text(color = "black",angle = 90,
                                      vjust = 0.5, hjust=1),
           axis.text.y = element_text(color = "black"))
-  if(show.val)
-    plt <- R.plt + geom_text(aes(label = sprintf("%.2f", .data$AUC)), size = val.size)
+  plt <- R.plt
+
+  if(show.val){
+    plt <- plt + geom_text(aes(label = sprintf("%.2f", .data$AUC)), size = val.size)
+  }
   return(plt)
 }
