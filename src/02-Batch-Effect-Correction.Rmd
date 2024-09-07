@@ -6,7 +6,6 @@
 |Combat|empirical Bayes frameworks|cleaned and normalized data|
 |Combat_seq|negative binomial regression|count data|
 |limma|linear model|log transfered data|
-|DWD|distance weighted discrimination|all kinds of data|
 
 ```{r eval=FALSE}
 library(tigeR)

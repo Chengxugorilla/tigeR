@@ -1,7 +1,7 @@
 --- 
 title: "tigeR: Tumor Immunotherapy Gene Expression Data Analysis R package"
 author: "Yihao Chen, Li-Na He, Yuanzhe Zhang, Jingru Gong, Shuangbin Xu, Yuelong Shu, Di Zhang, Guangchuang Yu, Zhixiang Zuo"
-date: "2024-06-21"
+date: "2024-07-22"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
