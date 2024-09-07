@@ -51,5 +51,5 @@ fraction_pie <- function(mtr, feature,
           plot.background = element_rect(fill = "transparent",color = "transparent"),
           panel.background = element_rect(fill="transparent",color = "transparent")) +
     coord_map() +
-    guides(fill=guide_legend(nrow=1))
+    guides(fill=guide_legend(nrow=3))
 }

@@ -1,5 +1,5 @@
-#' @title Visualize differential analysis result (Responder vs NonResponder or Pre-Treatment vs Post-Treatment).
-#' @description Visualize differential analysis result (Responder vs NonResponder or Pre-Treatment vs Post-Treatment).
+#' @title Visualize differential analysis result (Responder vs Non-Responder or Pre-Treatment vs Post-Treatment).
+#' @description Visualize differential analysis result (Responder vs Non-Responder or Pre-Treatment vs Post-Treatment).
 #' @param SE a SummarizedExperiment(SE) object or a list consists of SE objects. The colData of SE objects must contain response information.
 #' @param gene the Gene or Gene set you are interested in.
 #' @param type the comparison group you want to choose, 'Treatment' (Pre-Treatment vs Post-Treatment) or 'Response' (Responder vs Non-Responder ).
@@ -12,7 +12,7 @@
 #' @param panelcol the color of the panel border and ticks in the plot.
 #' @return
 #'   \describe{
-#'   Return a bar plot visualizing the differential analysis (Responder vs NonResponder or Pre-Treatment vs Post-Treatment)}
+#'   Return a bar plot visualizing the differential analysis (Responder vs Non-Responder or Pre-Treatment vs Post-Treatment)}
 #' @examples
 #' diff_biomk(SE=MEL_GSE78220,gene='CD274',type='Treatment')
 #' @export

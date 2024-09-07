@@ -2,7 +2,7 @@
 % Please edit documentation in R/diff_biomk.R
 \name{diff_biomk}
 \alias{diff_biomk}
-\title{Visualize differential analysis result (Responder vs NonResponder or Pre-Treatment vs Post-Treatment).}
+\title{Visualize differential analysis result (Responder vs Non-Responder or Pre-Treatment vs Post-Treatment).}
 \usage{
 diff_biomk(
   SE,
@@ -40,10 +40,10 @@ diff_biomk(
 }
 \value{
 \describe{
-  Return a bar plot visualizing the differential analysis (Responder vs NonResponder or Pre-Treatment vs Post-Treatment)}
+  Return a bar plot visualizing the differential analysis (Responder vs Non-Responder or Pre-Treatment vs Post-Treatment)}
 }
 \description{
-Visualize differential analysis result (Responder vs NonResponder or Pre-Treatment vs Post-Treatment).
+Visualize differential analysis result (Responder vs Non-Responder or Pre-Treatment vs Post-Treatment).
 }
 \examples{
 diff_biomk(SE=MEL_GSE78220,gene='CD274',type='Treatment')
