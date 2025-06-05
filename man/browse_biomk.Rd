@@ -2,7 +2,7 @@
 % Please edit documentation in R/browse_biomk.R
 \name{browse_biomk}
 \alias{browse_biomk}
-\title{Browse which TME cell type contribute most to the predictive performance.}
+\title{Browse which TME cell type(s) contribute(s) most to the predictive performance.}
 \usage{
 browse_biomk(
   SE,
@@ -13,16 +13,23 @@ browse_biomk(
 )
 }
 \arguments{
-\item{SE}{a SummarizedExperiment(SE) object or a list consists of multiple SE objects. The colData of the SE object(s) must contain treatment information named Treatment.}
+\item{SE}{a SummarizedExperiment(SE) object or a list consists of multiple SE objects. The colData of the SE object(s) must contain immunotherapy response information (R or NR).}
 
-\item{feature}{the cell types selected for analysis.}
+\item{feature}{the cell types or other features selected for analysis.}
 
 \item{colors}{the color selected for barplot and dotplot.}
 
-\item{PT_drop}{If TRUE, only untreated patient will be use for model training.}
+\item{PT_drop}{if TRUE, only untreated patient will be used for model training.}
 
 \item{lg.pos}{the position of legend. When lg.pos=c(0,0), the legend will be placed in the bottom left corner of the plot.}
 }
 \description{
 Generate a single layout comprised of a bar plot representing AUC and a dot plot denoting Hazard Ratio and P-value.
+}
+\examples{
+library(SummarizedExperiment)
+TM <- deconv_TME(MEL_GSE78220,method = "TIMER")
+TM_SE <- SummarizedExperiment(assays=SimpleList(TM),
+                              colData=colData(MEL_GSE78220))
+browse_biomk(SE=TM_SE)
 }

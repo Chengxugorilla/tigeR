@@ -1,5 +1,5 @@
 #' @title Draw pie charts for TME deconvolution result
-#' @description Generate a pie charts illustrating the cell fraction or relative cell abundance for each sample.
+#' @description Generate pie charts illustrating the cell fraction or relative cell abundance for each sample.
 #' @param mtr cell fraction matrix
 #' @param feature the color levels of the cell types.
 #' @param rows the number of rows in the plotting matrix.
@@ -51,5 +51,5 @@ fraction_pie <- function(mtr, feature,
           plot.background = element_rect(fill = "transparent",color = "transparent"),
           panel.background = element_rect(fill="transparent",color = "transparent")) +
     coord_map() +
-    guides(fill=guide_legend(nrow=1))
+    guides(fill=guide_legend(nrow=3))
 }

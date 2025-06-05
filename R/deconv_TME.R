@@ -1,8 +1,10 @@
 #' @title Perform tumor microenvironment deconvolution
 #' @description Perform tumor microenvironment deconvolution through 10 open-source algorithms.
 #' @param SE a SummarizedExperiment object contains the bulk RNA-seq dataset that you want to use for deconvolution and obtaining its cell fraction.
-#' @param method the TME analysis method you want to apply for.
+#' @param method the TME analysis method you want to apply for. A character string in c("TIMER","CIBERSORT","MCPCounter","xCell","IPS","epic","ESTIMATE","ABIS","ConsensusTME","quanTIseq").
 #' @param ... other argument in the 10 TME analysis functions.
+#' @examples
+#' deconv_TME(MEL_GSE78220,method = "TIMER")
 #' @export
 
 deconv_TME <- function(SE, method, ...){

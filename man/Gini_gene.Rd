@@ -4,10 +4,12 @@
 \alias{gini_gene}
 \title{Ranking features in matrix with Gini index}
 \usage{
-gini_gene(SE)
+gini_gene(SE, length.out = NULL)
 }
 \arguments{
 \item{SE}{a SummarizedExperiment(SE) object or a list consists of multiple SE objects. The colData of the SE object(s) must contain treatment information named Treatment.}
+
+\item{length.out}{the gene length returned by this function.}
 }
 \description{
 calculating the Gini index and get an overview of the classification efficiency of genes.

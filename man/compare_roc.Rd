@@ -4,10 +4,18 @@
 \alias{compare_roc}
 \title{Compare the roc curves of different models.}
 \usage{
-compare_roc(ROC)
+compare_roc(
+  ROC,
+  lg.label = c("NB", "SVM", "RF", "CC", "ADB", "LGB", "LGT"),
+  line.col = c("black", "#F89B9B", "#4DB867", "#C64D6A", "#FDCEBC", "green", "#ADD8E6")
+)
 }
 \arguments{
-\item{ROC}{dd}
+\item{ROC}{a list of roc objects that you want to campare.}
+
+\item{lg.label}{a character vector specifying the legend labels, which must be of the same length as the ROC list.}
+
+\item{line.col}{a character vector sepcifying the line colors.}
 }
 \description{
 plot all the roc curves on a single plot.

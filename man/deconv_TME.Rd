@@ -9,10 +9,13 @@ deconv_TME(SE, method, ...)
 \arguments{
 \item{SE}{a SummarizedExperiment object contains the bulk RNA-seq dataset that you want to use for deconvolution and obtaining its cell fraction.}
 
-\item{method}{the TME analysis method you want to apply for.}
+\item{method}{the TME analysis method you want to apply for. A character string in c("TIMER","CIBERSORT","MCPCounter","xCell","IPS","epic","ESTIMATE","ABIS","ConsensusTME","quanTIseq").}
 
 \item{...}{other argument in the 10 TME analysis functions.}
 }
 \description{
 Perform tumor microenvironment deconvolution through 10 open-source algorithms.
+}
+\examples{
+deconv_TME(MEL_GSE78220,method = "TIMER")
 }

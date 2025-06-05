@@ -1,14 +1,13 @@
-#' @title Refine a custom reference matrix
-#' @description refine a Custom reference matrix for TME deconvolution from single-cell sequencing data.
-#' @param Seurat_obj des
-#' @param n_ref_genes description
-#' @param logfc.threshold description
-#' @param min.pct des
-#' @param only.pos description
+#' @title Generate a custom reference matrix
+#' @description Generate a custom reference matrix from single-cell RNA sequencing data for TME deconvolution.
+#' @param Seurat_obj a Seurat object in which samples are clustered into different cell types.
+#' @param logfc.threshold limit testing to genes which show, on average, at least X-fold difference (log-scale) between the two groups of cells. Default is 0.1 Increasing logfc.threshold speeds up the function, but can miss weaker signals. If the slot parameter is "scale.data" no filtering is performed.
+#' @param min.pct only test genes that are detected in a minimum fraction of min.pct cells in either of the two populations. Meant to speed up the function by not testing genes that are very infrequently expressed. Default is 0.01.
+#' @param only.pos only return positive markers (FALSE by default).
 #' @export
 
-build_CellType_Ref <- function(Seurat_obj,n_ref_genes=50,
-                            logfc.threshold = 0.15,
+build_CellType_Ref <- function(Seurat_obj,
+                            logfc.threshold = 0.1,
                             min.pct=0.1,only.pos=TRUE){
   Markers <- Seurat::FindAllMarkers(object = Seurat_obj,
                                     assay = "RNA",

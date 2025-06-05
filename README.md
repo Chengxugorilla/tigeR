@@ -13,7 +13,7 @@ expression data.
 - 7 machine learning method for multi-modal prediction model construction and testing.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/Chengxugorilla/tigeR.extra/main/Figure 1.png" width="80%">
+<img src="https://raw.githubusercontent.com/Chengxugorilla/tigeR/gh-pages/figs/Figure 1.svg" width="80%">
 </p>
 <p align="center"><b>Overall design of tigeR</b></p>
 
@@ -32,9 +32,9 @@ devtools::install_github("YuLab-SMU/tigeR")
 The workflow of tigeR is below, see more details in [tigeR documentation](https://chengxugorilla.github.io/tigeR-book/).
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/Chengxugorilla/tigeR.extra/main/Figure 2.png" width="80%">
+<img src="https://raw.githubusercontent.com/Chengxugorilla/tigeR/gh-pages/figs/Figure 2.svg" width="80%">
 </p>
-<p align="center"><b>Workflow of tigeR</b></p>
+<p align="center"><b>Overall design of tigeR</b></p>
 
 ### 4. TIGER web server
 [TIGER Web Server](http://tiger.canceromics.org/#/)

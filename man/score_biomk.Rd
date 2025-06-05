@@ -20,7 +20,7 @@ score_biomk(
 
 \item{meta}{meta data of samples}
 
-\item{Signature}{a genes vector represents user-defined signature for Immunotherapy response. If NULL, the function will only calculate 23 built-in signatures in tigeR.}
+\item{Signature}{a gene vector represents user-defined signature for immunotherapy response. If NULL, the function will only calculate 23 built-in signatures in tigeR.}
 
 \item{method}{the method for calculating gene set scores which has several options: "Average_mean", "Weighted_mean", or "GSVA". The method can be set to NULL if the length of the parameter geneSet is 1. This means that if you are working with only one gene, the specific calculation method may not be applicable or necessary.}
 
@@ -28,7 +28,7 @@ score_biomk(
 }
 \value{
 \describe{
-  Return a matrix which rows represents samples and column represents signature scores.}
+  Return a matrix in which rows represent samples and columns represent signature scores.}
 }
 \description{
 generate a comprehensive signature score matrix for the 23 signatures in tigeR. Columns represent the signature scores, and rows denote the sample names.

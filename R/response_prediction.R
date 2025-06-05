@@ -45,13 +45,13 @@ response_prediction <- function(SE=NULL, exp_mtr=NULL, meta=NULL, threshold,posi
 #' @param positive c("N","R"), the positive case.
 #' @param Signature a gene vector represents user-defined signature for immunotherapy response. If NULL, the function will only calculate 23 built-in signatures in tigeR.
 #' @param method the method for calculating gene set scores which has several options: "Average_mean", "Weighted_mean", or "GSVA". The method can be set to NULL if the length of the parameter geneSet is 1. This means that if you are working with only one gene, the specific calculation method may not be applicable or necessary.
-#' @param PT_drop if TRUE, only Untreated patient will be use for model training.
-#' @param show.val if TRUE, the value will be show in the heatplot.
-#' @param sort_by the signature for the sample sorting in the heatmap.
+#' @param PT_drop if TRUE, only Untreated patient will be used for model training.
+#' @param show.val if TRUE, the value will be showed in the heatplot.
+#' @param sort_by the signature used to sort samples in the heatmap.
 #' @param group_by the signature score used for response classification.
 #' @param show.Observed if TRUE, show the observed cases in heatmap.
 #' @param text_col the color of the text in heatmap.
-#' @param rankscore if TRUE show the Robust Rank Aggregation score in heatmap.
+#' @param rankscore if TRUE, show the Robust Rank Aggregation score in heatmap.
 #' @param ZS if TRUE, conduct Z-score scaling on each signature score.
 #' @import patchwork
 #' @export
@@ -110,7 +110,7 @@ pred_response <- function(SE=NULL, exp_mtr=NULL, meta=NULL, threshold=0.8,
   }))
   if(!ZS){
     sig <- Core(exp_mtr, Signature, method)
-    vl <- cbind(Customed.Signature=sig,vl)
+    vl <- cbind(`Custom signature`=sig,vl)
   }
   vl <- t(na.omit(t(vl)))
   rank_mtr <-
@@ -170,5 +170,5 @@ pred_response <- function(SE=NULL, exp_mtr=NULL, meta=NULL, threshold=0.8,
           axis.title.y = element_blank(),
           axis.text.x = element_text(size=10,color=text_col,angle = 90, vjust = 0.5, hjust=1),
           axis.text.y = element_blank())
-  return(plt.l + plt.r + plot_layout(widths = c(1,30)))
+  return(plt.l + plt.r + plot_layout(widths = c(2,30)))
 }

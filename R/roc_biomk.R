@@ -3,7 +3,7 @@
 #' @param SE the dataset you use to assess your signature. A SummarizedExperiment (SE) object, which can be either a single SE object or a list of SE objects. Note that for each SE object, the colData must contain treatment information under the column named Treatment.
 #' @param Signature a gene vector represents the built-in or user-defined signature.
 #' @param method the method for calculating gene set scores which has several options: "Average_mean", "Weighted_mean", or "GSVA". The method can be set to NULL if the length of the parameter geneSet is 1. This means that if you are working with only one gene, the specific calculation method may not be applicable or necessary.
-#' @param rmBE whether remove batch effect between different data set using internal Combat method
+#' @param rmBE whether remove batch effect between different data sets using internal Combat method.
 #' @param response_NR If TRUE, classify patients with CR, MR, PR as Responders (R), and those with PD, SD, NR as Non-Responders(NR).
 #' @param PT_drop If TRUE, only untreated patient will be use for model training.
 #' @param auc.pos the position of the AUC value
@@ -12,9 +12,9 @@
 #' @param panelcol the color of the panel border and ticks in the plot.
 #' @return
 #'   \describe{
-#'   Return a list contain the following elements which including:
-#'     \item{\code{ROC}}{a receiver operating characteristic (ROC) object which controls
-#'     represent Non-Responder and cases respresent Responder.}
+#'   Return a list contain the following elements:
+#'     \item{\code{ROC}}{a receiver operating characteristic (ROC) object in which controls
+#'     represent Non-Responders and cases respresent Responders.}
 #'     \item{\code{figure}}{a roc curve to show the predictive performance.}
 #'   }
 #' @examples

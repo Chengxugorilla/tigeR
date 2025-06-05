@@ -37,11 +37,11 @@ pred_response(
 
 \item{method}{the method for calculating gene set scores which has several options: "Average_mean", "Weighted_mean", or "GSVA". The method can be set to NULL if the length of the parameter geneSet is 1. This means that if you are working with only one gene, the specific calculation method may not be applicable or necessary.}
 
-\item{PT_drop}{if TRUE, only Untreated patient will be use for model training.}
+\item{PT_drop}{if TRUE, only Untreated patient will be used for model training.}
 
-\item{show.val}{if TRUE, the value will be show in the heatplot.}
+\item{show.val}{if TRUE, the value will be showed in the heatplot.}
 
-\item{sort_by}{the signature for the sample sorting in the heatmap.}
+\item{sort_by}{the signature used to sort samples in the heatmap.}
 
 \item{group_by}{the signature score used for response classification.}
 
@@ -49,7 +49,7 @@ pred_response(
 
 \item{text_col}{the color of the text in heatmap.}
 
-\item{rankscore}{if TRUE show the Robust Rank Aggregation score in heatmap.}
+\item{rankscore}{if TRUE, show the Robust Rank Aggregation score in heatmap.}
 
 \item{ZS}{if TRUE, conduct Z-score scaling on each signature score.}
 }

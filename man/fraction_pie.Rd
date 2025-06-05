@@ -39,5 +39,5 @@ fraction_pie(
 \item{...}{other parameters}
 }
 \description{
-Generate a pie charts illustrating the cell fraction or relative cell abundance for each sample.
+Generate pie charts illustrating the cell fraction or relative cell abundance for each sample.
 }

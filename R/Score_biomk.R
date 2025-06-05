@@ -3,12 +3,12 @@
 #' @param SE a SummarizedExperiment object for which you want to calculate the signature score.
 #' @param exp_mtr an expression matrix for which you want to calculate the signature score.
 #' @param meta meta data of samples
-#' @param Signature a genes vector represents user-defined signature for Immunotherapy response. If NULL, the function will only calculate 23 built-in signatures in tigeR.
+#' @param Signature a gene vector represents user-defined signature for immunotherapy response. If NULL, the function will only calculate 23 built-in signatures in tigeR.
 #' @param method the method for calculating gene set scores which has several options: "Average_mean", "Weighted_mean", or "GSVA". The method can be set to NULL if the length of the parameter geneSet is 1. This means that if you are working with only one gene, the specific calculation method may not be applicable or necessary.
 #' @param PT_drop If TRUE, only Untreated patient will be use for model training.
 #' @return
 #'   \describe{
-#'   Return a matrix which rows represents samples and column represents signature scores.}
+#'   Return a matrix in which rows represent samples and columns represent signature scores.}
 #' @examples
 #' sig_res <- score_biomk(MEL_GSE78220)
 #' sig_res

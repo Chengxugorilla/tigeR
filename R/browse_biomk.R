@@ -1,10 +1,16 @@
-#' @title Browse which TME cell type contribute most to the predictive performance.
+#' @title Browse which TME cell type(s) contribute(s) most to the predictive performance.
 #' @description Generate a single layout comprised of a bar plot representing AUC and a dot plot denoting Hazard Ratio and P-value.
-#' @param SE a SummarizedExperiment(SE) object or a list consists of multiple SE objects. The colData of the SE object(s) must contain treatment information named Treatment.
-#' @param feature the cell types selected for analysis.
+#' @param SE a SummarizedExperiment(SE) object or a list consists of multiple SE objects. The colData of the SE object(s) must contain immunotherapy response information (R or NR).
+#' @param feature the cell types or other features selected for analysis.
 #' @param colors the color selected for barplot and dotplot.
-#' @param PT_drop If TRUE, only untreated patient will be use for model training.
+#' @param PT_drop if TRUE, only untreated patient will be used for model training.
 #' @param lg.pos the position of legend. When lg.pos=c(0,0), the legend will be placed in the bottom left corner of the plot.
+#' @examples
+#' library(SummarizedExperiment)
+#' TM <- deconv_TME(MEL_GSE78220,method = "TIMER")
+#' TM_SE <- SummarizedExperiment(assays=SimpleList(TM),
+#'                               colData=colData(MEL_GSE78220))
+#' browse_biomk(SE=TM_SE)
 #' @export
 
 browse_biomk <- function(SE, feature,colors=NULL,PT_drop=FALSE,lg.pos=c(0.7,0.14)){

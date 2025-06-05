@@ -40,9 +40,9 @@ surv_biomk(
 
 \item{p.round}{the decimal places you want to keep for p value}
 
-\item{PT_drop}{If TRUE, only untreated patient will be use for model training.}
+\item{PT_drop}{if TRUE, only untreated patient will be use for model training.}
 
-\item{drop_zero}{)If TRUE, 0 will not be considered when calculating median survival.}
+\item{drop_zero}{if TRUE, 0 will not be considered when calculating median survival.}
 }
 \value{
 \describe{
@@ -50,7 +50,7 @@ surv_biomk(
   of cox-ph analysis as well as plot Kaplan-Meier curves.}
 }
 \description{
-Visualize survival analysis result for a specified gene or gene set, and show hazard ratio, 95% confidence interval and P value of Cox regression analysis.
+Visualize survival analysis result for a specified gene or gene set, and show hazard ratio, 95\% confidence interval and P value of Cox regression analysis.
 }
 \examples{
 surv_biomk(SE=MEL_GSE78220,gene='CD274')

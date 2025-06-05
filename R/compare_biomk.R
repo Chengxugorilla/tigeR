@@ -1,15 +1,21 @@
 #' @title Compare the AUC of signature between datasets
-#' @description generate a heatmap of signature auc of datasets.
+#' @description Generate a heatmap of signature auc of datasets.
 #' @param SE a SummarizedExperiment object for which you want to calculate the Signature Score.
-#' @param Signature a genes vector represents user-defined signature for Immunotherapy response. If NULL, the function will only calculate 23 built-in signatures in tigeR.
+#' @param Signature a gene vector represents user-defined signature for Immunotherapy response. If NULL, the function will only calculate 23 built-in signatures in tigeR.
 #' @param method the method for calculating gene set scores which has several options: "Average_mean", "Weighted_mean", or "GSVA". The method can be set to NULL if the length of the parameter geneSet is 1. This means that if you are working with only one gene, the specific calculation method may not be applicable or necessary.
-#' @param PT_drop if TRUE, only Untreated patient will be use for model training.
-#' @param show.val if TRUE, the value will be show in the heatplot.
-#' @param val.size an integer represents the size of AUC value.
+#' @param PT_drop if TRUE, only untreated patient will be used for model training.
+#' @param show.val if TRUE, the value will be show edin the heatplot.
+#' @param val.size an integer represents the font size of AUC value.
 #' @importFrom SummarizedExperiment colData
 #' @return
 #'   \describe{generate a heatmap of signature AUC of datasets to compare the performance of
 #'   biomarkers of interest with built-in biomarkers.}
+#' @examples
+#' compare_biomk(
+#'    SE = list(MEL_GSE78220, MEL_GSE93157),
+#'    Signature = ipt[1:72],
+#'    method = "Weighted_mean",
+#'    PT_drop = FALSE)
 #' @export
 
 compare_biomk <- function(SE=NULL, Signature=NULL, method="Average_mean",
@@ -35,10 +41,6 @@ compare_biomk <- function(SE=NULL, Signature=NULL, method="Average_mean",
         })
     })
 
-  # cnames <- unlist(
-  #   lapply(SE, function(x){
-  #     unique(x$dataset_group)
-  #   }))
   cnames <- names(auc.l)
   auc.df <- do.call(cbind, auc.l)
 
@@ -53,7 +55,10 @@ compare_biomk <- function(SE=NULL, Signature=NULL, method="Average_mean",
     theme(axis.text.x = element_text(color = "black",angle = 90,
                                      vjust = 0.5, hjust=1),
           axis.text.y = element_text(color = "black"))
-  if(show.val)
-    plt <- R.plt + geom_text(aes(label = sprintf("%.2f", .data$AUC)), size = val.size)
+  plt <- R.plt
+
+  if(show.val){
+    plt <- plt + geom_text(aes(label = sprintf("%.2f", .data$AUC)), size = val.size)
+  }
   return(plt)
 }

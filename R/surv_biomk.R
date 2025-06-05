@@ -1,5 +1,5 @@
 #' @title Visualize survival analysis result for a specified gene or gene sets
-#' @description Visualize survival analysis result for a specified gene or gene set, and show hazard ratio, 95% confidence interval and P value of Cox regression analysis.
+#' @description Visualize survival analysis result for a specified gene or gene set, and show hazard ratio, 95\% confidence interval and P value of Cox regression analysis.
 #' @param SE an SummarizedExperiment(SE) object or a list consists of SE objects. The colData of SE objects must contain response information.
 #' @param gene is the Gene or Gene set you are interested in.
 #' @param method the method for calculating gene set scores which has several options: "Average_mean", "Weighted_mean", or "GSVA". The method can be set to NULL if the length of the parameter geneSet is 1. This means that if you are working with only one gene, the specific calculation method may not be applicable or necessary.
@@ -10,8 +10,8 @@
 #' @param lg.pos the position of legend. When lg.pos=c(0,0), the legend will be placed in the bottom left corner of the plot.
 #' @param lg.text c("precise","all"). If all, show the 95\% confidence interval of median survival.
 #' @param p.round the decimal places you want to keep for p value
-#' @param PT_drop If TRUE, only untreated patient will be use for model training.
-#' @param drop_zero )If TRUE, 0 will not be considered when calculating median survival.
+#' @param PT_drop if TRUE, only untreated patient will be use for model training.
+#' @param drop_zero if TRUE, 0 will not be considered when calculating median survival.
 #' @import ggplot2
 #' @importFrom SummarizedExperiment assay
 #' @importFrom magrittr %>%

@@ -2,7 +2,7 @@
 % Please edit documentation in R/diff_TME.R
 \name{diff_TME}
 \alias{diff_TME}
-\title{Visualize differential analysis cell_fraction (Responder vs NonResponder or Pre-Treatment vs Post-Treatment).}
+\title{Visualize difference of cell fraction}
 \usage{
 diff_TME(
   SE,
@@ -12,14 +12,16 @@ diff_TME(
 )
 }
 \arguments{
-\item{SE}{an SummarizedExperiment(SE) object or a list consists of SE objects. The colData of SE objects must contain response information.}
+\item{SE}{a SummarizedExperiment(SE) object or a list consists of SE objects. The colData of SE objects must contain response information.}
 
 \item{feature}{the feature or features you are interested in.}
 
-\item{style}{description}
+\item{style}{the plotting style. Choose from c("elegant", "raw").}
 
-\item{group_color}{description}
+\item{group_color}{a vector of colors with length 2.
+The first color corresponds to Non-Responders and
+the second color corresponds to Responders.}
 }
 \description{
-Visualize differential analysis cell_fraction (Responder vs NonResponder or Pre-Treatment vs Post-Treatment).
+Visualize difference of cell fraction between Responder and Non-Responder or Pre-Treatment and Post-Treatment patients.
 }
