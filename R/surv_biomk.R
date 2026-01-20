@@ -142,7 +142,7 @@ surv_styling <- function(df, style, conf.int, gene, method, val.pos, lg,lg.pos, 
   } else{
     P$plot <-
       P$plot +
-      theme(plot.title = element_text(face = "bold", size = "14",
+      theme(plot.title = element_text(face = "bold", size = 14,
                                       color = "black", hjust = 0.5),
             panel.grid.major = element_blank(),
             panel.grid.minor = element_blank(),
