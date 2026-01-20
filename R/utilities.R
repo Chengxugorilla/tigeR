@@ -387,9 +387,9 @@ response_filter <- function(response){
 plt_style <- function(df, textcol, panelcol){
   diff_theme <- theme(plot.background = element_rect(color="transparent",
                                                      fill="transparent"),
-                      plot.title = element_text(face = "bold",size = "14", color = textcol),
-                      axis.title = element_text(face = "bold", size = "12", color = textcol),
-                      axis.text = element_text(face = "bold", size = "10", color = textcol),
+                      plot.title = element_text(face = "bold",size = 14, color = textcol),
+                      axis.title = element_text(face = "bold", size = 12, color = textcol),
+                      axis.text = element_text(face = "bold", size = 10, color = textcol),
                       axis.ticks = element_line(color = panelcol),
                       panel.background = element_rect(fill = "transparent"),
                       panel.border = element_rect(linewidth = 1.5, fill="transparent", color = panelcol),
@@ -397,8 +397,8 @@ plt_style <- function(df, textcol, panelcol){
                       panel.grid.minor = element_blank(),
                       legend.background = element_rect(fill="transparent"),
                       legend.position = "right",
-                      legend.title = element_text(face = "bold", size = "12",color = textcol),
-                      legend.text = element_text(face='bold', size='10',color=textcol),
+                      legend.title = element_text(face = "bold", size = 12,color = textcol),
+                      legend.text = element_text(face='bold', size=10,color=textcol),
                       legend.key = element_blank(),
                       aspect.ratio = 1)
   df$group <- sub("Non-Responder","NR",df$group)
@@ -490,18 +490,18 @@ plt_roc <- function(ROC,auc.pos,auc.round,textcol="black",panelcol="black"){
     ggplot2::theme_bw() +
     ggplot2::theme(plot.background = element_rect(color="transparent",
                                                   fill="transparent"),
-                   plot.title = element_text(face = "bold",size = "14", color = textcol, hjust = 0.5),
-                   axis.title = element_text(face = "bold", size = "12", color = textcol),
-                   axis.text = element_text(face = "bold", size = "9", color = textcol),
+                   plot.title = element_text(face = "bold",size = 14, color = textcol, hjust = 0.5),
+                   axis.title = element_text(face = "bold", size = 12, color = textcol),
+                   axis.text = element_text(face = "bold", size = 9, color = textcol),
                    axis.ticks = element_line(color = panelcol),
                    panel.background = element_rect(fill = "transparent"),
                    panel.border = element_rect(fill = "transparent", color = panelcol, linewidth = 1.5),
                    panel.grid.major = element_blank(),
                    panel.grid.minor = element_blank(),
                    legend.position = "right",
-                   legend.title = element_text(face = "bold", size = "12",color = textcol),
+                   legend.title = element_text(face = "bold", size = 12,color = textcol),
                    legend.text = element_text(face='bold',
-                                              size='9',color=textcol),
+                                              size=9,color=textcol),
                    legend.key = element_blank(),
                    aspect.ratio = 1)
 }

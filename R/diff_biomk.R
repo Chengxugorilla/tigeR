@@ -42,5 +42,6 @@ diff_biomk <- function(SE, gene, type, method='Average_mean', PT_drop=TRUE, p.po
                                                     paste0(gene," expression"),
                                                     "Signature Score")) +
            ggplot2::theme(plot.title = element_text(hjust = 0.5)) +
-           annotate("text", x=p.pos[1], y=p.pos[2], label = paste0("P ",P),size = 3.5,hjust=0,color=textcol))
+           annotate("text", x=p.pos[1], y=p.pos[2], label = paste0("P ",P),
+                    size = 3.5,hjust=0,color=textcol))
 }
