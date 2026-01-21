@@ -50,10 +50,10 @@ browse_biomk <- function(SE, feature,colors=NULL,PT_drop=FALSE,lg.pos=c(0.7,0.14
           panel.grid.minor = element_blank(),
           panel.background = element_rect(fill = "transparent"),
           panel.border = element_rect(fill = "transparent",linewidth = 1.5),
-          axis.title.x = element_text(face = "bold", size = "12", color = "black"),
+          axis.title.x = element_text(face = "bold", size = 12, color = "black"),
           axis.title.y = element_blank(),
-          axis.text.x = element_text(face = "bold", size = "10", color = "black"),
-          axis.text.y = element_text(face = "bold", size = "12", color = "black"),
+          axis.text.x = element_text(face = "bold", size = 10, color = "black"),
+          axis.text.y = element_text(face = "bold", size = 12, color = "black"),
           aspect.ratio = 2)
 
   idx_UT <- seq_along(meta[,1])
@@ -117,8 +117,8 @@ browse_biomk <- function(SE, feature,colors=NULL,PT_drop=FALSE,lg.pos=c(0.7,0.14
           legend.key.size = unit(0.3,"cm"),
           legend.spacing.x = unit(0,"cm"),
           legend.spacing.y = unit(0,"cm"),
-          axis.text = element_text(face = "bold", size = "10", color = "black"),
-          axis.title = element_text(face = "bold", size = "12", color = "black"),
+          axis.text = element_text(face = "bold", size = 10, color = "black"),
+          axis.title = element_text(face = "bold", size = 12, color = "black"),
           aspect.ratio = 2)
 
   bar + dot
